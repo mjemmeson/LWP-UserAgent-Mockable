@@ -1,4 +1,12 @@
-Revision history for LWP-UserAgent-Mockable
+Revision history for {{$dist->name}}
+
+{{$NEXT}}
+        [BUG FIXES]
+        RT#100193 - Fails with perls > 5.21.3
+     
+        [MAINTENANCE]
+        - Created github repository
+        - Built via Dist::Zilla 
 
 1.10    2009-05-25
         - Allowed resetting of the action within a session.  Some error
