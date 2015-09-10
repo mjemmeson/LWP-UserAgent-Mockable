@@ -11,7 +11,7 @@ Version 1.10
     # setup env vars to control behaviour, allowing them to be
     # overridden from command line.  In current case, do before
     # loading module, so will be actioned on.
-    
+
     BEGIN {
         $ENV{ LWP_UA_MOCK } ||= 'playback';
         $ENV{ LWP_UA_MOCK_FILE } ||= 'lwp-mock.out';
@@ -40,7 +40,7 @@ Version 1.10
     # when the LWP work is done, inform LWP::UserAgent::Mockable
     # that we're finished.  Will trigger any behaviour specific to
     # the action being done, such as saving the recorded session.
-    
+
     LWP::UserAgent::Mockable->finished;
 
 # DESCRIPTION
