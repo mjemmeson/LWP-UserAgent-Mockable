@@ -71,7 +71,7 @@ sub __reset {
 
         $self->{ actions } = retrieve( $file );
 
-        $wrappers->{ pre } = wrap LWP::UserAgent::simple_request,
+        $wrappers->{ pre } = wrap 'LWP::UserAgent::simple_request',
             pre     => sub {
                 my ( $wrapped, $request ) = @_;
 
@@ -99,7 +99,7 @@ sub __reset {
                 $_[ -1 ] = $response;
             };
     } else {
-        $wrappers->{ pre } = wrap LWP::UserAgent::simple_request,
+        $wrappers->{ pre } = wrap 'LWP::UserAgent::simple_request',
             pre     => sub {
                 my ( $wrapped, $request ) = @_;
 
@@ -120,7 +120,7 @@ sub __reset {
         # This does mean that, when both pre- and post-record callbacks are being
         # used, that the post-callback will take precedence.
 
-        $wrappers->{ post } = wrap LWP::UserAgent::simple_request,
+        $wrappers->{ post } = wrap 'LWP::UserAgent::simple_request',
             post    => sub {
                 my $response = $_[ -1 ];
                 if ( $callbacks->{ record }) {
