@@ -7,7 +7,7 @@ use Hook::LexWrap;
 use LWP::UserAgent;
 use Storable qw( dclone nstore retrieve );
 
-our $VERSION = '1.10';
+our $VERSION = '1.11';
 
 my $instance = __PACKAGE__->__instance;
 sub __instance {

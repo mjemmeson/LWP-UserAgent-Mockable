@@ -59,7 +59,7 @@
    "provides" : {
       "LWP::UserAgent::Mockable" : {
          "file" : "lib/LWP/UserAgent/Mockable.pm",
-         "version" : "1.10"
+         "version" : "1.11"
       }
    },
    "release_status" : "stable",
@@ -74,7 +74,7 @@
          "web" : "https://github.com/mjemmeson/lwp-useragent-mockable"
       }
    },
-   "version" : "1.10",
+   "version" : "1.11",
    "x_contributors" : [
       "Michael Jemmeson <mjemmeson@cpan.org>"
    ]
