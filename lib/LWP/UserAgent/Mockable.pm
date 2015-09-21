@@ -5,6 +5,7 @@ use strict;
 
 use Hook::LexWrap;
 use LWP::UserAgent;
+use Safe::Isa '$_isa';
 use Storable qw( dclone nstore retrieve );
 
 our $VERSION = '1.11';
@@ -91,7 +92,7 @@ sub __reset {
                 if ( $callbacks->{ playback }) {
                     $response = $callbacks->{ playback }( $request, $response );
 
-                    if ( not UNIVERSAL::isa( $response, 'HTTP::Response' ) ) {
+                    if ( not $response->$_isa( 'HTTP::Response' ) ) {
                         die "playback callback didn't return an HTTP::Response object";
                     }
                 }
@@ -108,7 +109,7 @@ sub __reset {
                 if ( $callbacks->{ pre_record } ) {
                     $_[ -1 ] = $callbacks->{ pre_record }( $request );
 
-                    if ( not UNIVERSAL::isa( $_[ -1 ], 'HTTP::Response' ) ) {
+                    if ( not $_[ -1 ]->$_isa( 'HTTP::Response' ) ) {
                         die "pre-record callback didn't return an HTTP::Response object";
                     }
                 }
@@ -129,7 +130,7 @@ sub __reset {
                         $response
                     );
 
-                    if ( not UNIVERSAL::isa( $response, 'HTTP::Response' ) ) {
+                    if ( not $response->$_isa( 'HTTP::Response' ) ) {
                         die "record callback didn't return an HTTP::Response object";
                     }
                 }
@@ -326,6 +327,8 @@ Mark Morgan, C<< <makk384@gmail.com> >>
 =head1 CONTRIBUTORS
 
 Michael Jemmeson, C<< <michael.jemmeson@cpan.org> >>
+
+Kit Peters (KPETERS)
 
 =head1 BUGS
 
