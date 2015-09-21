@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+        [ENHANCEMENTS]
+        - Use Safe::Isa instead of UNIVERSAL::isa
 
 1.11  2015-09-10 10:22:09 BST
         [BUG FIXES]
