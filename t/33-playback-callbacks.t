@@ -11,7 +11,7 @@ use warnings;
 use LWP;
 use LWP::UserAgent::Mockable;
 use Storable;
-use Test::More tests => 10;
+use Test::More;
 
 use constant URL => "http://google.com";
 
@@ -58,5 +58,9 @@ is( ref $validation_success, 'HTTP::Response', "HTTP::Response returned" );
 isnt( $validation_success->code, 999, "...and it returns the expected response" );
 is( $same, 1, "Requested URI isthe one that was mocked" );
 
-LWP::UserAgent::Mockable->finished;
+END {
+    LWP::UserAgent::Mockable->finished;
+}
+
+done_testing();
 

@@ -11,9 +11,7 @@ use strict;
 use warnings;
 
 use Test::More;
-use Test::Internet;
-
-plan skip_all => "No internet connection." unless connect_ok();
+use Test::RequiresInternet ('www.example.com' => 80);
 
 use LWP;
 use LWP::UserAgent::Mockable;
@@ -42,6 +40,8 @@ foreach my $method ( @methods ) {
 my $post = $ua->post( "http://www.google.com" );
 is( ref $post, "HTTP::Response", 'post returns an HTTP::Response object' );
 
-LWP::UserAgent::Mockable->finished;
+END {
+    LWP::UserAgent::Mockable->finished;
+}
 
 done_testing();

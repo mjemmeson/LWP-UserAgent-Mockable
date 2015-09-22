@@ -10,7 +10,7 @@ use warnings;
 use LWP;
 use LWP::UserAgent::Mockable;
 use Storable;
-use Test::More tests => 9;
+use Test::More;
 
 use constant URL => "http://google.com";
 
@@ -37,6 +37,7 @@ LWP::UserAgent::Mockable->set_record_callback( $cb );
 LWP::UserAgent::Mockable->set_record_pre_callback( $pre_cb );
 
 my $ua = LWP::UserAgent->new;
+
 $ua->timeout( 3 );
 $ua->env_proxy;
 
@@ -86,6 +87,9 @@ eval {
 };
 ok( defined $@, "Error is thrown when post-callback doesn't return an HTTP::Response object" );
 
+END {
+    LWP::UserAgent::Mockable->finished;
+}
 
-LWP::UserAgent::Mockable->finished;
+done_testing();
 

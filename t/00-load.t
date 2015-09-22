@@ -1,7 +1,10 @@
 #!perl
 
-use Test::More tests => 1;
+use Test::More;
 
 BEGIN {
-	use_ok( 'LWP::UserAgent::Mockable' );
+    use_ok('LWP::UserAgent::Mockable');
 }
+
+done_testing();
+
