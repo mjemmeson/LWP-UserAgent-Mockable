@@ -26,7 +26,8 @@
    "prereqs" : {
       "configure" : {
          "requires" : {
-            "Module::Build::Tiny" : "0.039"
+            "Module::Build::Tiny" : "0.039",
+            "perl" : "5.006"
          }
       },
       "develop" : {
@@ -47,6 +48,7 @@
             "Safe::Isa" : "0",
             "Storable" : "2.05",
             "URI" : "0",
+            "perl" : "5.006",
             "strict" : "0",
             "warnings" : "0"
          }
@@ -54,7 +56,8 @@
       "test" : {
          "requires" : {
             "Test::More" : "0",
-            "Test::RequiresInternet" : "0"
+            "Test::RequiresInternet" : "0",
+            "perl" : "5.006"
          }
       }
    },
