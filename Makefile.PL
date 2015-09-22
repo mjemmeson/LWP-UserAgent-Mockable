@@ -12,6 +12,7 @@ WriteMakefile(
       : ()),
     PL_FILES            => {},
     PREREQ_PM => {
+        'Test::Internet'=> 0.05,
         'Test::More'    => 0,
         'Storable'      => 2.05,
         'Hook::LexWrap' => 0,
