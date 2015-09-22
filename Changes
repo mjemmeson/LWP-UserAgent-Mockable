@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+1.12  2015-09-22 10:18:36 BST
         [ENHANCEMENTS]
         - Use Safe::Isa instead of UNIVERSAL::isa (KPETERS)
 
