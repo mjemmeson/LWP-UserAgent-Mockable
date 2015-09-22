@@ -3,6 +3,9 @@ Revision history for {{$dist->name}}
 {{$NEXT}}
         [BUG FIXES]
         - RT#101744 Tests hang without network connectivity (MANWAR)
+        [MAINTENANCE]
+        - POD tidy
+        - Switched to Github issues from RT bugtracker
 
 1.12  2015-09-22 10:18:36 BST
         [ENHANCEMENTS]

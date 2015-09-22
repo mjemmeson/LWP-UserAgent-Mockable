@@ -53,7 +53,8 @@
       },
       "test" : {
          "requires" : {
-            "Test::More" : "0"
+            "Test::More" : "0",
+            "Test::RequiresInternet" : "0"
          }
       }
    },
@@ -66,8 +67,7 @@
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
-         "mailto" : "bug-LWP-UserAgent-Mockable@rt.cpan.org",
-         "web" : "https://rt.cpan.org/Public/Dist/Display.html?Name=LWP-UserAgent-Mockable"
+         "web" : "https://github.com/mjemmeson/lwp-useragent-mockable/issues"
       },
       "repository" : {
          "type" : "git",
