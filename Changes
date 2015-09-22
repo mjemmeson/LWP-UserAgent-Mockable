@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+1.13  2015-09-22 17:44:32 BST
         [BUG FIXES]
         - RT#101744 Tests hang without network connectivity (MANWAR)
         [MAINTENANCE]
