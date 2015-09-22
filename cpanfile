@@ -9,6 +9,7 @@ requires "URI";
 requires "warnings";
 
 on 'test' => sub {
+    requires "Test::Internet" => '0.05';
     requires "Test::More";
 };
 

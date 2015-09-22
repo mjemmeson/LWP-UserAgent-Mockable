@@ -77,7 +77,8 @@
    },
    "version" : "1.12",
    "x_contributors" : [
-      "Michael Jemmeson <mjemmeson@cpan.org>"
+      "Michael Jemmeson <mjemmeson@cpan.org>",
+      "Mohammad S Anwar <mohammad.anwar@yahoo.com>"
    ]
 }
 

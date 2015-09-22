@@ -330,6 +330,8 @@ Michael Jemmeson, C<< <michael.jemmeson@cpan.org> >>
 
 Kit Peters, C<< <popefelix@cpan.org> >>
 
+Mohammad S. Anwar, C<< <mohammad.anwar at yahoo.com> >>
+
 =head1 BUGS
 
 Please report any bugs or feature requests to C<bug-lwp-useragent-mockable at rt.cpan.org>, or through
