@@ -2,7 +2,7 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
         [ENHANCEMENTS]
-        - Use Safe::Isa instead of UNIVERSAL::isa
+        - Use Safe::Isa instead of UNIVERSAL::isa (KPETERS)
 
 1.11  2015-09-10 10:22:09 BST
         [BUG FIXES]

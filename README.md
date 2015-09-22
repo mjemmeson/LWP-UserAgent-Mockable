@@ -109,6 +109,8 @@ Mark Morgan, `<makk384@gmail.com>`
 
 Michael Jemmeson, `<michael.jemmeson@cpan.org>`
 
+Kit Peters, `<popefelix@cpan.org>`
+
 # BUGS
 
 Please report any bugs or feature requests to `bug-lwp-useragent-mockable at rt.cpan.org`, or through

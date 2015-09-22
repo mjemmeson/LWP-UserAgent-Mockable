@@ -328,7 +328,7 @@ Mark Morgan, C<< <makk384@gmail.com> >>
 
 Michael Jemmeson, C<< <michael.jemmeson@cpan.org> >>
 
-Kit Peters (KPETERS)
+Kit Peters, C<< <popefelix@cpan.org> >>
 
 =head1 BUGS
 
