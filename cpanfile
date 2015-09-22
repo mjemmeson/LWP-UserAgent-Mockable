@@ -14,6 +14,7 @@ on 'test' => sub {
 };
 
 on 'develop' => sub {
+    recommends "Test::Pod";
     recommends "Test::Pod::Coverage" => '1.08';
 };
 
