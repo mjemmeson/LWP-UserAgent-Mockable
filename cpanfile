@@ -2,6 +2,7 @@ requires "B::Deparse" => 0.61;
 requires "Hook::LexWrap";
 requires "LWP";
 requires "LWP::UserAgent";
+requires "Safe::Isa";
 requires "Storable" => '2.05';
 requires "strict";
 requires "URI";
