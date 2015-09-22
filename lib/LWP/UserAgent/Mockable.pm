@@ -403,8 +403,6 @@ L<https://github.com/mjemmeson/LWP-UserAgent-Mockable>
 
     git clone git://github.com/mjemmeson/LWP-UserAgent-Mockable.git
 
-=back
-
 =head1 COPYRIGHT & LICENSE
 
 Copyright 2009 Mark Morgan, all rights reserved.
