@@ -6,7 +6,7 @@ use warnings;
 use LWP;
 use LWP::UserAgent::Mockable;
 use Storable;
-use Test::More tests => 13;
+use Test::More;
 
 use constant URL => "http://google.com";
 use constant RECORD_FILE => 'reset.mockdata';
@@ -121,5 +121,9 @@ is(
     "playback returns same response as recorded with no callbacks"
 );
 
-LWP::UserAgent::Mockable->finished;
+END {
+    LWP::UserAgent::Mockable->finished;
+}
+
+done_testing();
 

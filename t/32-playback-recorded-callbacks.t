@@ -11,7 +11,7 @@ use warnings;
 use LWP;
 use LWP::UserAgent::Mockable;
 use Storable;
-use Test::More tests => 7;
+use Test::More;
 
 use constant URL => "http://google.com";
 
@@ -34,5 +34,9 @@ is( $post->code, 999, '...and it returns the fake response' );
 my $unfaked = $ua->get( URL );
 isnt( $unfaked->code, 999, "No faking done after callback cleared" );
 
-LWP::UserAgent::Mockable->finished;
+END {
+    LWP::UserAgent::Mockable->finished;
+}
+
+done_testing();
 

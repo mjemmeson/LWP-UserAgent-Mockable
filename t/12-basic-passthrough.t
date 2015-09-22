@@ -9,9 +9,11 @@ BEGIN {
 use strict;
 use warnings;
 
+use Test::More;
+use Test::RequiresInternet;
+
 use LWP;
 use LWP::UserAgent::Mockable;
-use Test::More tests => 7;
 
 my $ua = LWP::UserAgent->new;
 is( ref $ua, 'LWP::UserAgent', 'mocked LWP::UA is still a LWP::UA' );
@@ -37,4 +39,8 @@ foreach my $method ( @methods ) {
 my $post = $ua->post( "http://www.google.com" );
 is( ref $post, "HTTP::Response", 'post returns an HTTP::Response object' );
 
-LWP::UserAgent::Mockable->finished;
+END {
+    LWP::UserAgent::Mockable->finished;
+}
+
+done_testing();

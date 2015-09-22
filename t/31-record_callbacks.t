@@ -11,7 +11,7 @@ use warnings;
 use LWP;
 use LWP::UserAgent::Mockable;
 use Storable;
-use Test::More tests => 9;
+use Test::More;
 
 use constant URL => "http://google.com";
 
@@ -87,5 +87,9 @@ eval {
 };
 ok( defined $@, "Error is thrown when post-callback doesn't return an HTTP::Response object" );
 
-LWP::UserAgent::Mockable->finished;
+END {
+    LWP::UserAgent::Mockable->finished;
+}
+
+done_testing();
 
