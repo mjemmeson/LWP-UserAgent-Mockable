@@ -276,7 +276,7 @@ method, to indicate that LWP processing is completed.  Other than that, LWP
 handling can be done as-normal.
 
 As the initial impetus for this module was to allow mocking of external HTTP
-calls within unittests, a couple of optional callback (one for each action of
+calls within unit tests, a couple of optional callback (one for each action of
 the valid action types), to allow for custom handling of responses, or to modify
 the response that is returned back to the client (this is useful for simulating
 the requested system being down, or when playing back, to modify the mocked

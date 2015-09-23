@@ -14,6 +14,9 @@ use LWP;
 use LWP::UserAgent::Mockable;
 use Test::More;
 
+# prevent failures if tests run in parallel
+plan skip_all => 'basic.mockdata missing' unless -e 'basic.mockdata';
+
 my $ua = LWP::UserAgent->new;
 is( ref $ua, 'LWP::UserAgent', 'mocked LWP::UA is still a LWP::UA' );
 
