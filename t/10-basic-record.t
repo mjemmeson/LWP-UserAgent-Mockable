@@ -11,7 +11,7 @@ use strict;
 use warnings;
 
 use Test::More;
-use Test::RequiresInternet ('www.example.com' => 80);
+use Test::RequiresInternet;
 
 use LWP;
 use LWP::UserAgent::Mockable;

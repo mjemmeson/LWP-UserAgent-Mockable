@@ -8,10 +8,11 @@ BEGIN {
 use strict;
 use warnings;
 
+use Test::More;
+
 use LWP;
 use LWP::UserAgent::Mockable;
 use Storable;
-use Test::More;
 
 use constant URL => "http://google.com";
 

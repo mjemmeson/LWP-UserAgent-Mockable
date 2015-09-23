@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+        [BUG FIXES]
+        - RT#107252 Test failures if example.com cannot be reached
 
 1.13  2015-09-22 17:44:32 BST
         [BUG FIXES]
