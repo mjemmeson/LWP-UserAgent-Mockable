@@ -205,6 +205,8 @@ sub __set_cb {
 
 __END__
 
+=encoding utf-8
+
 =head1 NAME
 
 LWP::UserAgent::Mockable - Permits recording, and later playing back of LWP requests.
@@ -380,11 +382,13 @@ Mark Morgan, C<< <makk384@gmail.com> >>
 
 =head1 CONTRIBUTORS
 
-Michael Jemmeson, C<< <michael.jemmeson@cpan.org> >>
+Michael Jemmeson, C<< <michael.jemmeson at cpan.org> >>
 
-Kit Peters, C<< <popefelix@cpan.org> >>
+Kit Peters, C<< <popefelix at cpan.org> >>
 
 Mohammad S. Anwar, C<< <mohammad.anwar at yahoo.com> >>
+
+Slaven Rezić, C<< <SREZIC at cpan.org> >>
 
 =head1 SUPPORT
 

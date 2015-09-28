@@ -2,20 +2,21 @@
 
 # test basic usage, no callbacks, in record mode
 
-BEGIN {
-    $ENV{ LWP_UA_MOCK } = 'playback';
-    $ENV{ LWP_UA_MOCK_FILE } = 'basic.mockdata';
-}
-
 use strict;
 use warnings;
 
-use LWP;
-use LWP::UserAgent::Mockable;
 use Test::More;
 
-# prevent failures if tests run in parallel
-plan skip_all => 'basic.mockdata missing' unless -e 'basic.mockdata';
+BEGIN {
+    $ENV{LWP_UA_MOCK}      = 'playback';
+    $ENV{LWP_UA_MOCK_FILE} = 'basic.mockdata';
+
+    # prevent failures if tests run in parallel
+    plan skip_all => 'basic.mockdata missing' unless -e 'basic.mockdata';
+}
+
+use LWP;
+use LWP::UserAgent::Mockable;
 
 my $ua = LWP::UserAgent->new;
 is( ref $ua, 'LWP::UserAgent', 'mocked LWP::UA is still a LWP::UA' );

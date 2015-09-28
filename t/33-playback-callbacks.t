@@ -1,17 +1,20 @@
 #!perl
 
-BEGIN {
-    $ENV{ LWP_UA_MOCK } = 'playback';
-    $ENV{ LWP_UA_MOCK_FILE } = 'callbacks.mockdata';
-}
-
 use strict;
 use warnings;
+use Test::More;
+
+BEGIN {
+    $ENV{LWP_UA_MOCK}      = 'playback';
+    $ENV{LWP_UA_MOCK_FILE} = 'callbacks.mockdata';
+
+    # prevent failures if tests run in parallel
+    plan skip_all => 'callbacks.mockdata missing' unless -e 'callbacks.mockdata';
+}
 
 use LWP;
 use LWP::UserAgent::Mockable;
 use Storable;
-use Test::More;
 
 use constant URL => "http://google.com";
 
