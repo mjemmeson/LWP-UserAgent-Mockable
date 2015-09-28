@@ -161,11 +161,13 @@ Mark Morgan, `<makk384@gmail.com>`
 
 # CONTRIBUTORS
 
-Michael Jemmeson, `<michael.jemmeson@cpan.org>`
+Michael Jemmeson, `<michael.jemmeson at cpan.org>`
 
-Kit Peters, `<popefelix@cpan.org>`
+Kit Peters, `<popefelix at cpan.org>`
 
 Mohammad S. Anwar, `<mohammad.anwar at yahoo.com>`
+
+Slaven Rezić, `<SREZIC at cpan.org>`
 
 # SUPPORT
 

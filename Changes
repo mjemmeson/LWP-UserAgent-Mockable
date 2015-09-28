@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+1.15  2015-09-28 10:57:50 BST
         [BUG FIXES]
         - RT#107252 Test failures if example.com cannot be reached
         - Test suite should now run in parallel without failures
