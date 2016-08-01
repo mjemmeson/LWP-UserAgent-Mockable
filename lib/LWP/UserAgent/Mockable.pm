@@ -8,7 +8,7 @@ use LWP::UserAgent;
 use Safe::Isa '$_isa';
 use Storable qw( dclone nstore retrieve );
 
-our $VERSION = '1.15';
+our $VERSION = '1.16';
 
 my $instance = __PACKAGE__->__instance;
 sub __instance {

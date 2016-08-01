@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+        [MAINTENANCE]
+        - Github #3 Cleared up dependencies on Test::Internet and Test::RequiresInternet
 
 1.15  2015-09-28 10:57:50 BST
         [BUG FIXES]
