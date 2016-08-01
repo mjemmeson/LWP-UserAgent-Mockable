@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+1.16  2016-08-01 15:38:05 BST
         [MAINTENANCE]
         - Github #3 Cleared up dependencies on Test::Internet and Test::RequiresInternet
 
