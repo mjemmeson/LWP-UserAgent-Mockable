@@ -8,13 +8,15 @@ Version 1.10
 
 # SYNOPSIS
 
+In your test code:
+
     # setup env vars to control behaviour, allowing them to be
     # overridden from command line.  In current case, do before
     # loading module, so will be actioned on.
 
     BEGIN {
-        $ENV{ LWP_UA_MOCK } ||= 'playback';
-        $ENV{ LWP_UA_MOCK_FILE } ||= 'lwp-mock.out';
+        $ENV{LWP_UA_MOCK}      ||= 'playback';
+        $ENV{LWP_UA_MOCK_FILE} ||= "$0-lwp-mock.out";
     }
 
     use LWP;
@@ -45,6 +47,22 @@ Version 1.10
         # END block ensures cleanup if script dies early
         LWP::UserAgent::Mockable->finished;
     }
+
+To run the tests:
+
+    # Store data
+    LWP_UA_MOCK=record prove t/my-test.t
+
+    # Use stored data
+    prove t/my-test.t  # playback is default in example
+    # or
+    LWP_UA_MOCK=playback prove t/my-test.t
+
+    # Re-record stored data
+    LWP_UA_MOCK=record prove t/my-test.t
+
+    # Ignore stored data
+    LWP_UA_MOCK=passthrough prove t/my-test.t
 
 # DESCRIPTION
 

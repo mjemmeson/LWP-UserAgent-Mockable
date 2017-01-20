@@ -2,6 +2,9 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
 
+        [MAINTENANCE]
+        - Updated README file to match POD
+
 1.17  2016-11-16 08:49:48 GMT
         [DOCUMENTATION]
         - Added documentation on running tests

@@ -205,15 +205,11 @@ sub __set_cb {
 
 __END__
 
-=encoding utf-8
+=encoding UTF-8
 
 =head1 NAME
 
 LWP::UserAgent::Mockable - Permits recording, and later playing back of LWP requests.
-
-=head1 VERSION
-
-Version 1.10
 
 =head1 SYNOPSIS
 
